@@ -15,3 +15,11 @@ def write_embeddings(path, embeddings, id_to_vocab):
             vector = ' '.join(str(i) for i in embedding.tolist())
             f.write(f'{word} {vector}\n')
 
+
+# epoch 실행 시간 구하는 함수
+def epoch_time(start_time, end_time):
+    elapsed_time = end_time - start_time
+    elapsed_mins = int(elapsed_time / 60)
+    elapsed_secs = int(elapsed_time - (elapsed_mins * 60))
+    return elapsed_mins, elapsed_secs
+
