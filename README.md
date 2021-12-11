@@ -14,6 +14,7 @@ Install dependencies:
 ```
 pip3 install konlpy
 pip3 install tweepy==3.10.0
+bash <(curl -s https://raw.githubusercontent.com/konlpy/konlpy/master/scripts/mecab.sh)
 ```
 
 Note that using different version of required packages can effects the results, especially PyTorch. The implementations are tested on Python 3.7+
