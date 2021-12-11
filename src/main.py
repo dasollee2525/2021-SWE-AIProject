@@ -267,9 +267,9 @@ hidden_dim = op.hidden_dim
 best_valid_loss = 1024
 patience = 0
 
+print('START LEARNING')
+
 for epoch in range(epochs):
-    
-    print(epoch)
 
     # train
     model.train()
@@ -362,6 +362,9 @@ for epoch in range(epochs):
 
               
 # test
+model = model.BiLSTM4VAT(op.hidden_dim, op.num_layers, num_vocab, num_classes, op.embed_dim, embedding=word_embedding, dropout=op.dropout, vat=op.vat, epsilon=op.epsilon, device=device).to(device)
+model.load_state_dict(torch.load(model_path))
+
 test_loss = 0
 test_correct = 0
 
