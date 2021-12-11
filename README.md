@@ -12,7 +12,9 @@ This project aims to develop a model that classifies malicious comments by apply
 Install dependencies:
 
 ```
-pip install -r requirements.txt
+git clone https://github.com/SOMJANG/Mecab-ko-for-Google-Colab.git # tockenizer Mecab 관련 쉽게 설치(konlpy 포함)
+cd Mecab-ko-for-Google-Colab
+bash install_mecab-ko_on_colab190912.sh
 ```
 
 Note that using different version of required packages can effects the results, especially PyTorch. The implementations are tested on Python 3.7+
