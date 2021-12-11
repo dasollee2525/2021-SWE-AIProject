@@ -23,6 +23,8 @@ Note that using different version of required packages can effects the results, 
 
 Korean malicious comments dataset is from [Korean HateSpeech Dataset](https://github.com/kocohub/korean-hate-speech.git)
 
+### Input of the Model
+
 Due to the large dataset, preprocessing of the data takes a lot of time. Therefore, preprocessed files on spacing and basic spelling were stored as .csv files separately, and the model uses the data in this file as input values.
 
 
