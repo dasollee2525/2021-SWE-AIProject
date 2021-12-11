@@ -1,22 +1,16 @@
 import os
 import random
-import time
 import string
-import math
 import pandas as pd
 import numpy as np
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from multiprocessing import cpu_count
-
-import csv
 from torch.utils.data import Dataset
 from torch.utils.data import DataLoader
 
 import torch.optim as optim
-from torch.optim.lr_scheduler import _LRScheduler
 
 from konlpy.tag import Mecab
 
@@ -66,8 +60,10 @@ unlabeled_df = unlabeled_df.dropna()
 # tokenize
 tokenizer = Mecab()
 
+
 def remove_values_from_list(the_list, val):
     return [value for value in the_list if value != val]
+
 
 def remove_symbols_from_comments(comments):
     token = []
@@ -81,6 +77,7 @@ def remove_symbols_from_comments(comments):
         token[i] = remove_values_from_list(token[i], '')
     return token
 
+
 train_df[['comments'][0]] = remove_symbols_from_comments(train_df[['comments'][0]])
 valid_df[['comments'][0]] = remove_symbols_from_comments(valid_df[['comments'][0]])
 test_df[['comments'][0]] = remove_symbols_from_comments(test_df[['comments'][0]])
@@ -90,6 +87,7 @@ unlabeled_df[['comments'][0]] = remove_symbols_from_comments(unlabeled_df[['comm
 # vocab
 def get_array_from_index(df, index):
     return np.array([v for v in df[[index][0]]])
+
 
 def convert_to_vocab_id(vocab, dataset, labels, convert_vocab=True, ignore_unk=False, ign_eos=False):
     dataset_x = []
@@ -124,7 +122,9 @@ def convert_to_vocab_id(vocab, dataset, labels, convert_vocab=True, ignore_unk=F
     dataset_y = np.array(dataset_y, dtype=np.int32)
     return dataset_x, dataset_x_len, dataset_y
 
+
 min_count = op.min_count
+
 
 vocab = {}
 vocab['<eos>'] = 0
@@ -184,6 +184,7 @@ class HateCommentDataset(Dataset):
         text = x[idx]
         label = y[idx]
         return text, label
+
 
 max_len = op.max_len
 train_dataset = HateCommentDataset(train_x, train_y, max_len)
