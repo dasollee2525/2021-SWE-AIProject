@@ -34,7 +34,7 @@ Due to the large dataset, preprocessing of the data takes a lot of time. Therefo
 
 ```
 class Options(object):
-    unlabeled_ratio = 4 # labeled : unlabeled ratio
+    unlabeled_ratio = 1 # labeled : unlabeled ratio
     max_len = 50 # maximum comment length
     min_count = 0 # minimum number to include vocab list
     batch_size = 64
@@ -56,30 +56,18 @@ class Options(object):
 ```
 
 
-## How to run
+## How to use
 
-### Pretrained models
+use model.pt
+model
+- model_default_base.pt
+- model_pretrained_base.pt
+- model_pretrained_vat_1.pt
+- model_default_vat_1.pt
+- model_default_vat_2.pt
+- model_default_vat_4.pt
 
-
-### Training
-
-- Korean-handwriting
-
+train yourself
 ```
-python train.py $NAME cfgs/kor.yaml
-```
-
-- Thai-printing
-
-```
-python train.py $NAME cfgs/kor.yaml cfgs/thai.yaml
-```
-
-
-### Evaluation
-
-- Korean-handwriting
-
-```
-python evaluator.py $NAME $CHECKPOINT_PATH $OUT_DIR cfgs/kor.yaml --mode cv-save
+python main.py
 ```
