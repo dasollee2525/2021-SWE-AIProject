@@ -68,7 +68,7 @@ model
 - model_default_vat_2.pt
 - model_default_vat_4.pt
 
-train yourself
+train & test yourself
 ```
 python main.py
 ```
