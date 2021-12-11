@@ -15,6 +15,7 @@ Install dependencies:
 git clone https://github.com/SOMJANG/Mecab-ko-for-Google-Colab.git
 cd Mecab-ko-for-Google-Colab
 bash install_mecab-ko_on_colab190912.sh
+pip3 install tweepy==3.10.0
 ```
 
 Note that using different version of required packages can effects the results, especially PyTorch. The implementations are tested on Python 3.7+
