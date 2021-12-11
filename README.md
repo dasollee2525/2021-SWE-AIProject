@@ -30,7 +30,7 @@ Korean malicious comments dataset is from [Korean HateSpeech Dataset](https://gi
 Due to the large dataset, preprocessing of the data takes a lot of time. Therefore, preprocessed files on spacing and basic spelling were stored as .csv files separately, and the model uses the data in this file as input values.
 
 
-## Hyperparametrs
+## Hyperparameters
 
 
 ```
