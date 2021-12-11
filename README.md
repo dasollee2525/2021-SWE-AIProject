@@ -40,18 +40,18 @@ class Options(object):
     min_count = 0 # minimum number to include vocab list
     batch_size = 64
     
-    pretrained = True
-    num_layers = 1
-    hidden_dim = 1024
-    embed_dim = 256
-    dropout = 0.1
+    pretrained = True # choose pretrained model or not
+    num_layers = 1 
+    hidden_dim = 1024 # dimension of hidden layer
+    embed_dim = 256 # dimension of embedding layer
+    dropout = 0.1 # the rate of dropout
     vat = True
     epsilon = 1e+6 # perturbation size
     alpha = 1.0 # regularization coefficient
     
-    lr = 0.001
-    factor = 0.5
-    patience = 2
+    lr = 0.001 # learning rate
+    factor = 0.5 # the decrease ratio of learning rate
+    patience = 2 # Count the number of times the learning rate decreases
     verbose = True
     epoch = 100
 ```
