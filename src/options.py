@@ -3,12 +3,12 @@ class Options(object):
     max_len = 50 # maximum comment length
     min_count = 0 # minimum number to include vocab list
     batch_size = 64
-    pretrained = False
+    pretrained = True
     num_layers = 1
     hidden_dim = 1024
     embed_dim = 256
     dropout = 0.1
-    vat = False
+    vat = True
     epsilon = 1e+6 # perturbation size
     alpha = 1.0 # regularization coefficient
     lr = 0.001
@@ -16,3 +16,5 @@ class Options(object):
     patience = 3
     verbose = True
     epochs = 100
+    pretrain_epoch = 1
+    pretrain_clip = 0.1
