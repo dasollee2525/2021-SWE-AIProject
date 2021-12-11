@@ -12,7 +12,7 @@ This project aims to develop a model that classifies malicious comments by apply
 Install dependencies:
 
 ```
-git clone https://github.com/SOMJANG/Mecab-ko-for-Google-Colab.git # tockenizer Mecab 관련 쉽게 설치(konlpy 포함)
+git clone https://github.com/SOMJANG/Mecab-ko-for-Google-Colab.git
 cd Mecab-ko-for-Google-Colab
 bash install_mecab-ko_on_colab190912.sh
 ```
