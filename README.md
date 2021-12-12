@@ -73,5 +73,5 @@ python main.py
 TEST loss: 1.034, acc: 47.826
 ```
 
-The main.py will be executed with hyperparameters above. You can change the hyperparameter by changing options.py in src.
-Your model which is the output of the main.py will be saved in model.
+The main.py will be executed with hyperparameters above. You can change the hyperparameter by changing options.py in src.  
+Created model by main.py will be saved in model.  
