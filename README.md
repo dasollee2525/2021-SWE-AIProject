@@ -59,16 +59,7 @@ class Options(object):
 
 ## How to use
 
-use model.pt
-model
-- model_default_base.pt
-- model_pretrained_base.pt
-- model_pretrained_vat_1.pt
-- model_default_vat_1.pt
-- model_default_vat_2.pt
-- model_default_vat_4.pt
 
-train & test yourself
 ```
 python main.py
 ```
