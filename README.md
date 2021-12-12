@@ -61,7 +61,7 @@ class Options(object):
 
 ## How to use
 
-
+### Input Command
 ```
 python main.py
 ```
