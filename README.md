@@ -62,7 +62,7 @@ class Options(object):
 ## How to use
 
 ### Input Command
-When executing the BiLSTM4VAT model, execute the following code inside the src/ directory. The model will consist of pretrained word embeddings by default.
+When executing the BiLSTM4VAT model, execute the following code inside the src/ directory. The model will use the pretrained word embedding weights given by default.
 
 When executing the SemiPretSeq2Seq model, execute the following code inside the src/utils/pretrain/ directory. This model is only for pretraining the word embeddings for BiLSTM4VAT.
 ```
