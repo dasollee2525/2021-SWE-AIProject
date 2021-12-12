@@ -35,7 +35,7 @@ You can use preprocess.py if you want to preprocess data yourself.
 ## Hyperparameters
 
 
-```
+```python
 class Options(object):
     unlabeled_ratio = 1 # labeled : unlabeled ratio
     max_len = 50 # maximum comment length
@@ -74,4 +74,4 @@ TEST loss: 1.034, acc: 47.826
 ```
 
 The main.py will be executed with hyperparameters above. You can change the hyperparameter by changing options.py in src.  
-The model created by main.py will be saved in model as *your_model_default(pretrained)_base(vat)_(unlabeld_ratio).py*.
+The model created by main.py will be saved in model as `your_model_default(pretrained)_base(vat)_(unlabeld_ratio).py`.
