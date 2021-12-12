@@ -16,5 +16,4 @@ class Options(object):
     patience = 3
     verbose = True
     epochs = 100
-    pretrain_epoch = 10
-    pretrain_clip = 0.1
+
