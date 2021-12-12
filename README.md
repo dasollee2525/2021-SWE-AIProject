@@ -33,7 +33,7 @@ Due to the large dataset, preprocessing of the data takes a lot of time. Therefo
   
 ## Pretrained Word Embedding Model
   
-`wordemb-pretrain124all.pt` in `model` direcotry is the model for pretraining the word embeddings for BiLSTM4VAT.  You can use `main.py` in `sr/uitls/pretrain` directory if you want to preprocess data yourself.
+`wordemb-pretrain124all.pt` in `model` directory is the model for pretraining the word embeddings for BiLSTM4VAT.  You can use `main.py` in `sr/uitls/pretrain` directory if you want to preprocess data yourself.
   
   
 ## Hyperparameters
