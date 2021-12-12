@@ -6,7 +6,7 @@
 ### Brief Explanation
 
 This project aims to develop a model that classifies malicious comments by applying semi-supervised learning to natural language processing, and to obtain similar or higher performance than a supervised model using only labeled data. Considering the difficulty of manually labeling malicious comments, we intend to implement a semi-supervised learning model that can be practically applied to malicious comment detection. Additionally, the project compares and evaluates the ratio of labeled and unlabeled data to derive the optimal ratio of data that shows the best performance in semi-supervised learning for classifying malicious Korean comments.
-
+  
 
 
 ## Installation
@@ -23,33 +23,25 @@ bash <(curl -s https://raw.githubusercontent.com/konlpy/konlpy/master/scripts/me
 Note that using different version of required packages can effects the results, especially PyTorch. The implementations are tested on Python 3.7+
 
 
-
 ## Dataset
 
-
 ### Data sources
-
 
 Korean malicious comments dataset is from [Korean HateSpeech Dataset](https://github.com/kocohub/korean-hate-speech.git)
 
 ### Input of the Model
 
-
 Due to the large dataset, preprocessing of the data takes a lot of time. Therefore, preprocessed files on spacing and basic spelling were stored in `data/preprocessed` directory as .csv files separately, and the model uses the data in this file as input values.
 You can use `preprocessing.py` in `src/utils` directory if you want to preprocess data yourself.
 
 
-
 ## Pretrained Word Embedding Model
-
 
 `wordemb-pretrain124all.pt` in `model` direcotry is the model for pretraining the word embeddings for BiLSTM4VAT.
 You can use `main.py` in `sr/uitls/pretrain` directory if you want to preprocess data yourself.
 
 
-
 ## Hyperparameters
-
 
 ```python
 class Options(object):
@@ -75,17 +67,13 @@ class Options(object):
 ```
 
 
-
 ## How to use
 
-
 ### Input Command
-
 
 ```
 python main.py
 ```
-
 
 ### Output Example
 
