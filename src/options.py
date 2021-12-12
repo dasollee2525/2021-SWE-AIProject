@@ -13,7 +13,7 @@ class Options(object):
     alpha = 1.0 # regularization coefficient
     lr = 0.001
     factor = 0.5
-    patience = 3
+    patience = 2
     verbose = True
     epochs = 100
 
