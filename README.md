@@ -83,5 +83,4 @@ python main.py
 TEST loss: 1.034, acc: 47.826
 ```
 
-The `main.py` will be executed with hyperparameters above. You can change the hyperparameter by changing `options.py` in `src` directory.  
-The model created by `main.py` will be saved in `model` directory as `your_model_default(pretrained)_base(vat)_(unlabeld_ratio).py`.
+The `main.py` will be executed with hyperparameters above. You can change the hyperparameter by changing `options.py` in `src` directory. The model created by `main.py` will be saved in `model` directory as `your_model_default(pretrained)_base(vat)_(unlabeld_ratio).py`.
