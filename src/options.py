@@ -16,3 +16,4 @@ class Options(object):
     patience = 3
     verbose = True
     epochs = 100
+
