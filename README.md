@@ -27,14 +27,14 @@ Korean malicious comments dataset is from [Korean HateSpeech Dataset](https://gi
 
 ### Input of the Model
 
-Due to the large dataset, preprocessing of the data takes a lot of time. Therefore, preprocessed files on spacing and basic spelling were stored in `data/processed/` as .csv files separately, and the model uses the data in this file as input values.
-You can use `preprocess.py` if you want to preprocess data yourself.
+Due to the large dataset, preprocessing of the data takes a lot of time. Therefore, preprocessed files on spacing and basic spelling were stored in `data/preprocessed` directory as .csv files separately, and the model uses the data in this file as input values.
+You can use `preprocessing.py` in `src/utils` directory if you want to preprocess data yourself.
 
 
 ## Pretrained Word Embedding Model
 
-`wordemb-pretrain124all.pt` in `model/` direcotry is the model for pretraining the word embeddings for BiLSTM4VAT.
-You can use `preprocess.py` if you want to preprocess data yourself.
+`wordemb-pretrain124all.pt` in `model` direcotry is the model for pretraining the word embeddings for BiLSTM4VAT.
+You can use `main.py` in `sr/uitls/pretrain` directory if you want to preprocess data yourself.
 
 
 ## Hyperparameters
@@ -80,5 +80,5 @@ python main.py
 TEST loss: 1.034, acc: 47.826
 ```
 
-The `main.py` will be executed with hyperparameters above. You can change the hyperparameter by changing `options.py` in `src/` directory.
-The model created by `main.py` will be saved in model as `your_model_default(pretrained)_base(vat)_(unlabeld_ratio).py`.
+The `main.py` will be executed with hyperparameters above. You can change the hyperparameter by changing `options.py` in `src` directory.
+The model created by `main.py` will be saved in `model` as `your_model_default(pretrained)_base(vat)_(unlabeld_ratio).py`.
