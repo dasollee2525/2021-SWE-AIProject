@@ -9,12 +9,12 @@ This project aims to develop a model that classifies malicious comments by apply
   
 ## Installation
   
-Install dependencies:
+Install dependencies(Mac):
   
-```
-pip3 install konlpy
-pip3 install tweepy==3.10.0
-bash <(curl -s https://raw.githubusercontent.com/konlpy/konlpy/master/scripts/mecab.sh)
+```bash
+$ pip3 install konlpy
+$ pip3 install tweepy==3.10.0
+$ bash <(curl -s https://raw.githubusercontent.com/konlpy/konlpy/master/scripts/mecab.sh)
 ```
   
 Note that using different version of required packages can effects the results, especially PyTorch. The implementations are tested on Python 3.7+
@@ -66,8 +66,8 @@ class Options(object):
   
 ### Input Command
   
-```
-python main.py
+```bash
+$ python main.py
 ```
   
 ### Output Example
