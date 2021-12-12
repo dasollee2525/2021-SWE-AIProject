@@ -63,6 +63,7 @@ class Options(object):
 
 ### Input Command
 When executing the BiLSTM4VAT model (main model), execute the following code inside the src/ directory.
+
 When executing the SemiPretSeq2Seq model (model for pretraining word embeddings), execute the following code inside the src/utils/pretrain/ directory.
 ```
 python main.py
