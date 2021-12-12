@@ -19,7 +19,8 @@ bash <(curl -s https://raw.githubusercontent.com/konlpy/konlpy/master/scripts/me
 
 Note that using different version of required packages can effects the results, especially PyTorch. The implementations are tested on Python 3.7+
 
-## Dataset preparation
+
+## Dataset
 
 ### Data sources
 
@@ -28,6 +29,7 @@ Korean malicious comments dataset is from [Korean HateSpeech Dataset](https://gi
 ### Input of the Model
 
 Due to the large dataset, preprocessing of the data takes a lot of time. Therefore, preprocessed files on spacing and basic spelling were stored as .csv files separately, and the model uses the data in this file as input values.
+You can use preprocess.py if you want to preprocess data yourself.
 
 
 ## Hyperparameters
@@ -40,7 +42,7 @@ class Options(object):
     min_count = 0 # minimum number to include vocab list
     batch_size = 64
     
-    pretrained = True # choose pretrained model or not
+    pretrained = False # choose pretrained model or not
     num_layers = 1 
     hidden_dim = 1024 # dimension of hidden layer
     embed_dim = 256 # dimension of embedding layer
@@ -63,3 +65,12 @@ class Options(object):
 ```
 python main.py
 ```
+
+### Output Example
+```
+[ 1] TRAIN loss: 0.546, acc: 41.414, lr: 0.001000 .... VALID loss: 1.099, acc: 32.484, best_loss: 1.099 .... patience: 0
+...  
+TEST loss: 1.034, acc: 47.826
+```
+
+main.py will be executed with hyperparameters above. You can change the hyperparameter by changing options.py in src.
