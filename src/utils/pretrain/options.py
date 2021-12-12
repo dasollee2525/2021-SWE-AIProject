@@ -7,5 +7,5 @@ class Options(object):
     embed_dim = 256
     dropout = 0.1
     lr = 0.001
-    pretrain_epoch = 1
+    pretrain_epoch = 10
     pretrain_clip = 0.1

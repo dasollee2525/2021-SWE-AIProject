@@ -15,6 +15,4 @@ class Options(object):
     factor = 0.5
     patience = 3
     verbose = True
-    epochs = 3
-    pretrain_epoch = 10
-    pretrain_clip = 0.1
+    epochs = 100
