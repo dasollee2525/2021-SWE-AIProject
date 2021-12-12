@@ -7,7 +7,7 @@ import time
 
 import torch.optim as optim
 
-from src import options
+from src.utils.pretrain import options
 from src.utils.pretrain.encoder_decoder import EncoderRNN, DecoderRNN
 from src.utils.pretrain.model import SemiPretSeq2Seq
 from src.utils.pretrain.data_vocab import vocab, unlabeled_loader, valid_loader, train_loader, test_loader
@@ -21,9 +21,6 @@ np.random.seed(SEED)
 torch.manual_seed(SEED)
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
-op = options.Options()
-batch_size = op.batch_size
-
 # path
 train_csv_path = '../../../data/preprocessed/train.csv'
 valid_csv_path = '../../../data/preprocessed/valid.csv'
@@ -32,7 +29,7 @@ model_path = '../../../model/my_pretrain_model.pt'
 emb_path = '../../../model/my_new_word_emb.pt'
 
 options = options.Options()
-batch_size = op.batch_size
+batch_size = options.batch_size
 
 N_EPOCHS = options.pretrain_epoch
 CLIP = options.pretrain_clip
