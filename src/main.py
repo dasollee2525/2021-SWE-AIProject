@@ -14,7 +14,7 @@ import torch.optim as optim
 
 from konlpy.tag import Mecab
 
-import model
+import model as m
 import options
 
 
@@ -220,7 +220,7 @@ if op.pretrained:
     for i in n_emb:
         i.pop(0)
 
-    n_emb = np.array(n_emb).astype(np.float)
+    n_emb = np.array(n_emb).astype(float)
     n_emb = torch.FloatTensor(n_emb)
     word_embedding = nn.Embedding.from_pretrained(n_emb)
 
@@ -239,7 +239,7 @@ else:
 num_vocab = len(vocab)
 num_classes = 3
 
-model = model.BiLSTM4VAT(op.hidden_dim, 
+model = m.BiLSTM4VAT(op.hidden_dim,
                    op.num_layers, 
                    num_vocab, 
                    num_classes, 
@@ -363,7 +363,7 @@ for epoch in range(epochs):
 
               
 # test
-model = model.BiLSTM4VAT(op.hidden_dim, op.num_layers, num_vocab, num_classes, op.embed_dim, embedding=word_embedding, dropout=op.dropout, vat=op.vat, epsilon=op.epsilon, device=device).to(device)
+model = m.BiLSTM4VAT(op.hidden_dim, op.num_layers, num_vocab, num_classes, op.embed_dim, embedding=word_embedding, dropout=op.dropout, vat=op.vat, epsilon=op.epsilon, device=device).to(device)
 model.load_state_dict(torch.load(model_path))
 
 test_loss = 0
